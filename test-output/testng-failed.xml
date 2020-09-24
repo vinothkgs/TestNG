@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="fftest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="SAS.Login">
+        <methods>
+          <include name="tc1"/>
+          <include name="tc5"/>
+          <include name="tc2"/>
+          <include name="tc3" invocation-numbers="1 2"/>
+          <include name="tc6"/>
+        </methods>
+      </class> <!-- SAS.Login -->
+    </classes>
+  </test> <!-- fftest(failed) -->
+  <test thread-count="5" name="chrometest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="SAS.Login">
+        <methods>
+          <include name="tc1"/>
+          <include name="tc5"/>
+          <include name="tc2"/>
+          <include name="tc3" invocation-numbers="0 1 2"/>
+        </methods>
+      </class> <!-- SAS.Login -->
+    </classes>
+  </test> <!-- chrometest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
